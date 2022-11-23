@@ -32,12 +32,15 @@ class Contact < ApplicationRecord
   # dependent: :destroy
   #   - delete the parent, it will also delete the children 
   #   - prevent orphan data in db
- has_many :notes, dependent: :destroy
- has_one :addresses, dependent: :destroy
+
+  has_many :notes, dependent: :destroy
+  has_one :address, dependent: :destroy
+
+
   # Validations
-
-  # Backbacks 
-
-  # Methods
-
-end
+    # - make rules and constrainst of your model
+    # validates :attr how we are validating
+    # confirmation -
+    #   helper make sure that two fields are the same 
+    #   password
+    #   password_confirm
